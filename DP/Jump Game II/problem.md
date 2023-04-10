@@ -1,12 +1,12 @@
 ## 45. Jump Game II
-
+<https://leetcode.com/problems/jump-game-ii/>
 <div class="px-5 pt-4"><div class="_1l1MA" data-track-load="qd_description_content"><p>You are given a <strong>0-indexed</strong> array of integers <code>nums</code> of length <code>n</code>. You are initially positioned at <code>nums[0]</code>.</p>
 
 <p>Each element <code>nums[i]</code> represents the maximum length of a forward jump from index <code>i</code>. In other words, if you are at <code>nums[i]</code>, you can jump to any <code>nums[i + j]</code> where:</p>
 
 <ul>
-	<li><code>0 &lt;= j &lt;= nums[i]</code> and</li>
-	<li><code>i + j &lt; n</code></li>
+ <li><code>0 &lt;= j &lt;= nums[i]</code> and</li>
+ <li><code>i + j &lt; n</code></li>
 </ul>
 
 <p>Return <em>the minimum number of jumps to reach </em><code>nums[n - 1]</code>. The test cases are generated such that you can reach <code>nums[n - 1]</code>.</p>
@@ -29,8 +29,8 @@
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
-	<li>It's guaranteed that you can reach <code>nums[n - 1]</code>.</li>
+ <li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+ <li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
+ <li>It's guaranteed that you can reach <code>nums[n - 1]</code>.</li>
 </ul>
 </div></div>
