@@ -1,6 +1,6 @@
 ## 17. Letter Combinations of a Phone Number
 
-<https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/>
+<https://leetcode.com/problems/letter-combinations-of-a-phone-number>
 
 <div class="px-5 pt-4"><div class="_1l1MA" data-track-load="qd_description_content"><p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent. Return the answer in <strong>any order</strong>.</p>
 
