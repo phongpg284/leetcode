@@ -13,12 +13,12 @@ class Solution:
             res[0] = max(res[0], count)
             return
 
-        status[requests[start][0]] -= 1
+        status[requests[start][0]] -= 1         # Pick request
         status[requests[start][1]] += 1
 
         self.solve(requests, status, start + 1, n, count + 1, res)
 
-        status[requests[start][0]] += 1
+        status[requests[start][0]] += 1         # Unpick request
         status[requests[start][1]] -= 1
 
         self.solve(requests, status, start + 1, n, count, res)
