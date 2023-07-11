@@ -11,6 +11,7 @@ class Solution:
         parent = {}
         queue = deque([root])
 
+        # first BFS to store parent-child relation
         while queue:
             n = len(queue)
             for _ in range(n):
@@ -24,6 +25,7 @@ class Solution:
                     parent[top.right.val] = top
                     queue.append(top.right)
 
+        # second BFS to find node with distance of k from target node
         visited = {}
         queue.append(target)
         while k > 0 and queue:
