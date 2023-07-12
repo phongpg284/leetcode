@@ -8,6 +8,13 @@ class Solution:
                 res.append(i)
         return res
 
+    '''
+        DFS to check if safe node
+        Target is to find node not in a cycle
+        
+        visited = 1 mean node is visited and safe
+        visited = -1 mean node is visited and in a cycle
+    '''
     def dfs(self, visited, graph, node, cycle):
         if visited[node] == 1:
             return True
