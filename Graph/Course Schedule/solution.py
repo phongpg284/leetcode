@@ -11,6 +11,14 @@ class Solution:
                     return False
         return True
     
+
+    '''
+    Target is find cycle in graph
+
+    visited = 1 mean visited and safe node
+    visited = -1 mean visited and in cycle
+    '''
+
     def checkCycle(self, graph, visited, node):
         if visited[node] == 1:
             return True
