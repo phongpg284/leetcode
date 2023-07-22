@@ -6,15 +6,24 @@ class Solution:
         return res / (8 ** k)
 
     def move(self, r, c, k, n, dp, row, col, directions):
+        # if knight step of chessboard
         if r < 0 or c < 0 or r >= n or c >= n:
             return 0
+
+        # if knight finish k moves
         if k == 0:
             return 1
+        
+        # if already compute in dp
         if dp[r][c][k] > 0:
             return dp[r][c][k]
 
         res = 0
+
+        # move all directions 
         for x, y in directions:
             res += self.move(r + x, c + y, k - 1, n, dp, row, col, directions)
+        
+        # store res to dp
         dp[r][c][k] = res
         return res
