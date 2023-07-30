@@ -18,3 +18,18 @@ class Solution:
             return dp[i][j]
         
         return recur(n, n)
+    
+
+    # find the limit where posibilities become 1 
+    def binary_search_limit(low, high, epsilon):
+        while high - low > 1:
+            mid = low + (high - low) // 2
+            result = soupServings(mid)
+            if abs(result - 1.0) <= epsilon:
+                high = mid
+            else:
+                low = mid
+        return high
+
+epsilon = 10**(-5)
+binary_search_limit(1000, 5000, epsilon)    #return 4451
