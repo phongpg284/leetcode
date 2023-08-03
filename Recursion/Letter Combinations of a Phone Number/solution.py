@@ -3,20 +3,19 @@ class Solution:
         result = []
         if digits == '':
             return []
-        return self.recur_digits(result, "", 0, digits)
+   
+        def recur_digits(current_str, digit_index):
+            if digit_index == len(digits):
+                result.append(current_str)
+                return       
+            digit = digits[digit_index]
+            chars = self.get_chars(digit)
 
-    def recur_digits(self, result, current_str, digit_index, digits):
-        if (digit_index == len(digits)):
-            result.append(current_str)
-            return result       
+            for char in chars:
+                recur_digits(current_str + char,  digit_index + 1)
 
-        digit = digits[digit_index]
-        chars = self.get_chars(digit)
-
-        for char in chars:
-            self.recur_digits(result, current_str + char,  digit_index + 1, digits)
-
-        return result
+        recur_digits("", 0)
+        return result 
 
     def get_chars(self, num):
         num = int(num)
