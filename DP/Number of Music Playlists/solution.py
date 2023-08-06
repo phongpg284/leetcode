@@ -7,7 +7,9 @@ class Solution:
         for i in range(1, goal + 1):
             dp[i][0] = 0
             for j in range(1, min(i, n) + 1):
+                # add new song to playlist
                 dp[i][j] = dp[i - 1][j - 1] * (n - (j - 1)) % mod
                 if j > k:
+                    # add old song to playlist
                     dp[i][j] = (dp[i][j] + dp[i - 1][j] * (j - k)) % mod
         return dp[goal][n]  
