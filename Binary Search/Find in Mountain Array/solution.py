@@ -10,8 +10,10 @@ class Solution:
     def findInMountainArray(self, target: int, mountain_arr: 'MountainArray') -> int:
         n = mountain_arr.length()
         
+        # Find top of the mountain
         top = self.top_mountain(mountain_arr)
 
+        # Find by using binary search on 2 side of the mountain
         left_side = self.binary_search(mountain_arr, 0, top, target, 'left')
         if left_side != -1: return left_side
         
