@@ -9,3 +9,8 @@ class Solution:
             else:
                 left = mid + 1
         return left
+    
+# One line solution
+class Solution:
+    def poorPigs(self, buckets: int, minutesToDie: int, minutesToTest: int) -> int:
+        return ceil(log2(buckets)/log2(minutesToTest//minutesToDie+1))
