@@ -1,3 +1,4 @@
+# Prefix sum solution
 class Solution:
     def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
         n = len(nums)
@@ -16,3 +17,17 @@ class Solution:
             res[i] = (nums[i] * i - prefix[i]) + (suffix[i] - nums[i] * (n - i - 1))
         return res
     
+# Slide window solution
+class Solution:
+    def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
+        total_sum = sum(nums)
+        left, right = 0, total_sum
+        result = []
+
+        for i, n in enumerate(nums):
+            right -= n
+            result.append(n * i - left + right - n * (len(nums) - i - 1))
+            left += n
+
+        return result
+               
