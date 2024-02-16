@@ -6,4 +6,5 @@ class Solution:
             t += counter[i]
             i += 1
 
+        # incase t == k, remove 0 value
         return len(counter) - i + 1 if t > k else len(counter) - i
