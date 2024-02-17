@@ -1,10 +1,9 @@
 class Solution:
     def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:
-        res = 0
         n = len(heights)
         s = []
-        for i in range(1, n):
-            dif = heights[i] - heights[i - 1]
+        for i in range(n - 1):
+            dif = heights[i + 1] - heights[i]
             while dif > 0:
                 if bricks >= dif:
                     bricks -= dif
@@ -12,7 +11,7 @@ class Solution:
                     dif = 0
                 else:
                     if ladders == 0:
-                        return res
+                        return i
 
                     if len(s) > 0:
                         top = s[0]
@@ -24,5 +23,4 @@ class Solution:
                     else:
                         dif = 0
                     ladders -= 1
-            res += 1
-        return res
+        return n - 1
