@@ -7,7 +7,7 @@ class Solution:
         while i < n:
             j = i
             max_end = suffix_end[s[j]]
-            while j < max_end:
+            while j < max_end:          # move right pointer to max end character of current partition
                 j += 1
                 max_end = max(max_end, suffix_end[s[j]])
             res.append(j - i + 1)
